@@ -25,3 +25,4 @@ vite.config.ts.timestamp-*
 
 
 .gitignore
+git remote add origin https://github.com/000bachir/Sveltekit-Cart.git

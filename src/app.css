@@ -1,12 +1,21 @@
 @import 'tailwindcss';
 
-:root{
-  --background-color : #030104;
+:root {
+  --background-color: #030104;
+    --font-family: "Space Mono", monospace;
+
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("/fonts/SpaceMono-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 
 
-html , body{
-    scroll-behavior: smooth;
+html,
+body {
+  scroll-behavior: smooth;
 }
 
 
@@ -19,6 +28,9 @@ body {
 
   /* background color*/
   background: var(--background-color);
+
+  /* font used*/
+  font-family: var(--font-family);
 }
 
 body::-webkit-scrollbar {
@@ -33,12 +45,11 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
   border-radius: 3px;
-  
+
 }
 
 @supports not selector(::-webkit-scrollbar) {
   body {
-    scrollbar-color: var(--sb-thumb-color)
-                     var(--sb-track-color);
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
   }
 }
