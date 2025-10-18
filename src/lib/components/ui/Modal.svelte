@@ -10,38 +10,45 @@
 	});
 </script>
 
-<dialog
-	bind:this={dialog}
-	onclose={() => (showModal = false)}
-	onclick={(e) => {
-		if (e.target === dialog) dialog.close();
-	}}
->
-	<div class="">
-		{@render header?.()}
-		<hr />
-		{@render children?.()}
-		<hr />
-		<!-- svelte-ignore a11y_autofocus -->
-		<button autofocus onclick={() => dialog.close()}> Close </button>
-	</div>
-</dialog>
+<article class="relative flex items-center justify-center">
+	<dialog
+		bind:this={dialog}
+		onclose={() => (showModal = false)}
+		onclick={(e) => {
+			if (e.target === dialog) dialog.close();
+		}}
+		class="bg-red-500 h-[80%] aspect-square rounded-2xl "
+	>
+		<div class="">
+			{@render header?.()}
+			<hr />
+			{@render children?.()}
+			<hr />
+			<!-- svelte-ignore a11y_autofocus -->
+			<button
+				autofocus
+				title="close"
+				onclick={() => dialog.close()}
+				class="cursor-pointer bg-linear-to-r from-cyan-500 to-blue-500 text-white"
+			>
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+					><path
+						fill="currentColor"
+						d="M2.93 17.07A10 10 0 1 1 17.07 2.93A10 10 0 0 1 2.93 17.07M11.4 10l2.83-2.83l-1.41-1.41L10 8.59L7.17 5.76L5.76 7.17L8.59 10l-2.83 2.83l1.41 1.41L10 11.41l2.83 2.83l1.41-1.41L11.41 10z"
+					/></svg
+				>
+			</button>
+		</div>
+	</dialog>
+</article>
 
 <style>
 	dialog {
-		/* max-width:32rem; */
-        background: red;
-		width: 100%;
-		max-width: 420px;
-		max-height: 20rem;
-		border: none;
-		overflow-y: scroll;
-		box-shadow:
-			rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-			rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-			rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-        padding: 1rem;
-        overflow: hidden;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin: 0; /* Remove default margin */
 	}
 
 	dialog::backdrop {
@@ -78,6 +85,6 @@
 	}
 
 	button {
-		display: block;
+		display: flex;
 	}
 </style>

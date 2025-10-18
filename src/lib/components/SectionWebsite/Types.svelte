@@ -5,7 +5,7 @@
 	let showModal = $state(false);
 </script>
 
-<section class="relative h-auto w-full">
+<section class="relative h-auto w-full overflow-hidden">
 
 	<!--little disclaimer-->
 
@@ -18,7 +18,7 @@
 	</div>
 
 	<div class="grid h-96 w-full grid-cols-2 relative overflow-hidden">
-		<article class="relative col-span-1 flex h-full w-full items-center justify-center overflow-hidden">
+		<article class="relative col-span-1 flex h-full w-full items-center justify-center overflow-hidden ">
 			<button
 				onclick={()=> showModal = true }
 				type="button"
@@ -33,9 +33,8 @@
 						Dummy json types
 					</h2>
 				{/snippet}
-
-				<pre aria-label="code snippet" class="bg-zinc-900 text-zinc-100 text-sm text-left  overflow-y-scroll h-40 min-w-auto  ">
-					<code class="language-ts">
+				<pre class="bg-zinc-900 text-zinc-100 text-sm overflow-scroll ">
+					<code class="language-ts ">
 						export type Product = &#123;
 							id: number;
 							title: string;
@@ -59,8 +58,9 @@
 							meta: Meta;
 							thumbnail: string;
 							images: string[];
-							&#125;
-							export type CartProduct = &#123;
+						&#125;
+
+						export type CartProduct = &#123;
 							id: string;
 							product: Product;
 							quantity: number;
