@@ -6,7 +6,6 @@
 </script>
 
 <section class="relative h-auto w-full overflow-hidden">
-
 	<!--little disclaimer-->
 
 	<div class="relative flex h-32 w-full items-center justify-center">
@@ -17,53 +16,51 @@
 		</h1>
 	</div>
 
-	<div class="grid h-96 w-full grid-cols-2 relative overflow-hidden">
-		<article class="relative col-span-1 flex h-full w-full items-center justify-center overflow-hidden ">
+	<div class="relative grid h-96 w-full grid-cols-2 overflow-hidden">
+		<article
+			class="relative col-span-1 flex flex-col h-full w-full items-center justify-center gap-10 overflow-hidden"
+		>
+			<h1 class="font-semibold text-2xl text-white text-center text-balance">Create a CartProduct.ts file in the lib directory then add the types</h1>
 			<button
-				onclick={()=> showModal = true }
+				onclick={() => (showModal = true)}
 				type="button"
-				class="cursor-pointer me-2 mb-2 rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
+				class="me-2 mb-2 cursor-pointer rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
 			>
 				Display Types
 			</button>
 
 			<Modal bind:showModal>
-				{#snippet header()}
-					<h2>
-						Dummy json types
-					</h2>
-				{/snippet}
-				<pre class="bg-zinc-900 text-zinc-100 text-sm overflow-scroll ">
-					<code class="language-ts ">
-						export type Product = &#123;
-							id: number;
-							title: string;
-							description: string;
-							category: string;
-							price: number;
-							discountPercentage: number;
-							rating: number;
-							stock: number;
-							tags: string[];
-							brand: string;
-							sku: string;
-							weight: number;
-							dimensions: Dimensions;
-							warrantyInformation: string;
-							shippingInformation: string;
-							availabilityStatus: string;
-							reviews: Review[];
-							returnPolicy: string;
-							minimumOrderQuantity: number;
-							meta: Meta;
-							thumbnail: string;
-							images: string[];
+				{#snippet header()}{/snippet}
+				<pre class=" text-sm text-zinc-100">
+					<code id="language-ts" class="leading-relaxed font-semibold">
+						<span style="color: #569cd6">export</span> <span style="color: #569cd6">type</span> <span style="color: #4ec9b8">Product</span> = &#123;
+							<span style="color: #9cdcfe">id</span>: <span style="color: #569cd6">number</span>;
+							<span style="color: #9cdcfe">title</span>: <span style="color: #569cd6">string</span>;
+							<span style="color: #9cdcfe">description</span>: <span style="color: #569cd6">string</span>;
+							<span style="color: #9cdcfe">category</span>: <span style="color: #569cd6">string</span>;
+							<span style="color: #9cdcfe">price</span>: <span style="color: #569cd6">number</span>;
+							<span style="color: #9cdcfe">discountPercentage</span>: <span style="color: #569cd6">number</span>;
+							<span style="color: #9cdcfe">rating</span>: <span style="color: #569cd6">number</span>;
+							<span style="color: #9cdcfe">stock</span>: <span style="color: #569cd6">number</span>;
+							<span style="color: #9cdcfe">tags</span>: <span style="color: #569cd6">string</span>[];
+							<span style="color: #9cdcfe">brand</span>: <span style="color: #569cd6">string</span>;
+							<span style="color: #9cdcfe">sku</span>: <span style="color: #569cd6">string</span>;
+							<span style="color: #9cdcfe">weight</span>: <span style="color: #569cd6">number</span>;
+							<span style="color: #9cdcfe">dimensions</span>: <span style="color: #4ec9b8">Dimensions</span>;
+							<span style="color: #9cdcfe">warrantyInformation</span>: <span style="color: #569cd6">string</span>;
+							<span style="color: #9cdcfe">shippingInformation</span>: <span style="color: #569cd6">string</span>;
+							<span style="color: #9cdcfe">availabilityStatus</span>: <span style="color: #569cd6">string</span>;
+							<span style="color: #9cdcfe">reviews</span>: <span style="color: #4ec9b8">Review</span>[];
+							<span style="color: #9cdcfe">returnPolicy</span>: <span style="color: #569cd6">string</span>;
+							<span style="color: #9cdcfe">minimumOrderQuantity</span>: <span style="color: #569cd6">number</span>;
+							<span style="color: #9cdcfe">meta</span>: <span style="color: #4ec9b8">Meta</span>;
+							<span style="color: #9cdcfe">thumbnail</span>: <span style="color: #569cd6">string</span>;
+							<span style="color: #9cdcfe">images</span>: <span style="color: #569cd6">string</span>[];
 						&#125;
-
-						export type CartProduct = &#123;
-							id: string;
-							product: Product;
-							quantity: number;
+							<span style="color: #569cd6">export</span> <span style="color: #569cd6">type</span> <span style="color: #4ec9b8">CartProduct</span> = &#123;
+							<span style="color: #9cdcfe">id</span>: <span style="color: #569cd6">string</span>;
+							<span style="color: #9cdcfe">product</span>: <span style="color: #4ec9b8">Product</span>;
+							<span style="color: #9cdcfe">quantity</span>: <span style="color: #569cd6">number</span>;
 						&#125;
 					</code>
 				</pre>

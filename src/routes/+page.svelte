@@ -1,5 +1,6 @@
 <script>
 	import Hero from '$lib/components/SectionWebsite/Hero.svelte';
+	import Stores from '$lib/components/SectionWebsite/Stores.svelte';
 	import Types from '$lib/components/SectionWebsite/Types.svelte';
 </script>
 
@@ -25,4 +26,5 @@
 
 	<Hero />
     <Types />
+	<Stores />
 </main>
