@@ -1,0 +1,3 @@
+<pre class="h-full w-full flex items-center justify-center text-sm overflow-x-auto bg-gradient-to-r from-gray-50 to-blue-50 font-semibold"><code class="text-gray-800 leading-relaxed">
+<span class="text-blue-600 font-semibold">let</span> cartStore = <span class="text-red-600 font-semibold">writable</span><span class="text-blue-600">&#60;CartProduct&#91;&#93;&#62;</span>(initialCart)
+            </code></pre>
