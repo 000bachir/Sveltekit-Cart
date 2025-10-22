@@ -2,6 +2,44 @@
 	import StoreSveltekit from '$lib/assets/Icons/StoreSveltekit.svelte';
 	import CheckingTheBrowser from '../ui/LogicExplanation/CheckingTheBrowser.svelte';
 	import CreateTheStore from '../ui/LogicExplanation/CreateTheStore.svelte';
+	import LocalStorageSync from './LocalStorageSync.svelte';
+	import { onMount , onDestroy } from 'svelte';
+	import gsap from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+	gsap.registerPlugin(ScrollTrigger)
+	function CardAppearing(){
+		
+		let rightCard = document.getElementById("right-card")
+		const triggerAnimation = document.getElementById("animation-trigger")
+		if(!rightCard){
+			console.error("error could not find the right card element")
+			return
+		}
+		if(!triggerAnimation){
+			console.error("error could not find the trigger animation container")
+			return
+		}
+
+		let timeLine = gsap.timeline()
+		timeLine.fromTo(rightCard , {
+			opacity : 0,
+			ScrollTrigger : {
+				trigger : triggerAnimation , 
+				start : "top top",
+				end : "bottom bottom",
+				scrub : true , 
+				markers : true
+			} 
+		},{ 
+			opacity : 1 , 
+			duration : 1.5
+		})
+	}
+	onMount(()=>{
+		CardAppearing()
+	})
+
 </script>
 
 <main class="relative h-auto w-auto overflow-hidden">
@@ -118,6 +156,22 @@
 				Step Three : keep the browser memory updated
 			</h1>
 		</div>
+
+        <div id="animation-trigger" class="h-96  w-full relative overflow-hidden grid grid-cols-2">
+			<div id="right-card" class="bg h-full w-full relative col-span-1 flex items-center justify-center">
+				<div class="h-[80%] w-[80%]  rounded-2xl border border-gray-600 shadow-2xl overflow-hidden ">
+					<LocalStorageSync />
+				</div>
+			</div>
+			<div id="left-card" class="h-full w-full relative col-span-1 flex items-center justify-center">
+				<div class="h-[80%] w-[80%] rounded-2xl border border-gray-600 shadow-2xl overflow-hidden flex items-center justify-center">
+					<p class="text-lg font-semibold text-white text-center text-balance px-4">
+						Every store change is saved to localStorage.
+					</p>	
+				</div>
+			</div>	
+		</div>
+
     </section>
 
 </main>
