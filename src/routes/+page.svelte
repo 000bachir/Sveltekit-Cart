@@ -1,7 +1,8 @@
 <script>
-	import Hero from '$lib/components/SectionWebsite/Hero.svelte';
-	import Stores from '$lib/components/SectionWebsite/Stores.svelte';
-	import Types from '$lib/components/SectionWebsite/Types.svelte';
+	import Hero from '$lib/components/InitSection/Hero.svelte';
+	import Stores from '$lib/components/InitSection/Stores.svelte';
+	import Types from '$lib/components/InitSection/Types.svelte';
+	import DerivedStore from '$lib/components/LogicSection/DerivedStore.svelte';
 </script>
 
 <svelte:head>
@@ -24,7 +25,15 @@
 		</h1>
 	</section>
 
+
+	<!-- ? this part will be kind of an intro on how to import initialise and the sync the tools needed -->
+
 	<Hero />
     <Types />
 	<Stores />
+
+	<!-- ! Now the logic part -->
+
+	<DerivedStore />
+
 </main>

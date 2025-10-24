@@ -1,44 +1,65 @@
+
+<!--TODO : need to add responsiveness-->
+
+
 <script>
 	import StoreSveltekit from '$lib/assets/Icons/StoreSveltekit.svelte';
 	import CheckingTheBrowser from '../ui/LogicExplanation/CheckingTheBrowser.svelte';
 	import CreateTheStore from '../ui/LogicExplanation/CreateTheStore.svelte';
 	import LocalStorageSync from './LocalStorageSync.svelte';
-	import { onMount , onDestroy } from 'svelte';
+	import { onMount, onDestroy } from 'svelte';
 	import gsap from 'gsap';
-	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	import { browser } from '$app/environment';
 
-	gsap.registerPlugin(ScrollTrigger)
-	function CardAppearing(){
-		
-		let rightCard = document.getElementById("right-card")
-		const triggerAnimation = document.getElementById("animation-trigger")
-		if(!rightCard){
-			console.error("error could not find the right card element")
-			return
-		}
-		if(!triggerAnimation){
-			console.error("error could not find the trigger animation container")
-			return
-		}
 
-		let timeLine = gsap.timeline()
-		timeLine.fromTo(rightCard , {
-			opacity : 0,
-			ScrollTrigger : {
-				trigger : triggerAnimation , 
-				start : "top top",
-				end : "bottom bottom",
-				scrub : true , 
-				markers : true
-			} 
-		},{ 
-			opacity : 1 , 
-			duration : 1.5
-		})
-	}
-	onMount(()=>{
-		CardAppearing()
+	let scrollTriggerInstance;
+
+
+
+	onMount(() => {
+		if (browser) {
+			gsap.registerPlugin(ScrollTrigger);
+		}
+		let rightCard = document.getElementById('right-card');
+		const triggerAnimation = document.getElementById('animation-trigger');
+		if (!rightCard) {
+			console.error('error could not find the right card element');
+			return;
+		}
+		if (!triggerAnimation) {
+			console.error('error could not find the trigger animation container');
+			return;
+		}
+		let TimeLine = gsap.timeline({
+			scrollTrigger: {
+				trigger: triggerAnimation,
+				top: 'top top',
+				end: 'bottom bottom',
+				scrub: true,
+			}
+		});
+		TimeLine.fromTo(
+			rightCard,
+			{
+				opacity: 0
+			},
+			{
+				opacity: 1,
+				duration: 1.5,
+				ease: 'back.inOut'
+			}
+		);
+
+		scrollTriggerInstance = TimeLine.scrollTrigger
+
+	});
+	onDestroy(()=>{
+		if(scrollTriggerInstance){
+			scrollTriggerInstance.kill()
+		}
 	})
+
 
 </script>
 
@@ -147,9 +168,9 @@
 		</article>
 	</section>
 
-    <!--Local Storage Sync to the ui-->
-    <section class="h-auto w-full relative overflow-hidden">
-        <div class="mx-auto flex h-32 w-[95%] items-center justify-center">
+	<!--Local Storage Sync to the ui-->
+	<section class="relative h-auto w-full overflow-hidden">
+		<div class="mx-auto flex h-32 w-[95%] items-center justify-center">
 			<h1
 				class="font-semibold text-white sm:text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
 			>
@@ -157,23 +178,29 @@
 			</h1>
 		</div>
 
-        <div id="animation-trigger" class="h-96  w-full relative overflow-hidden grid grid-cols-2">
-			<div id="right-card" class="bg h-full w-full relative col-span-1 flex items-center justify-center">
-				<div class="h-[80%] w-[80%]  rounded-2xl border border-gray-600 shadow-2xl overflow-hidden ">
+		<div id="animation-trigger" class="relative grid h-96 w-full grid-cols-2 overflow-hidden">
+			<div
+				id="right-card"
+				class="bg relative col-span-1 flex h-full w-full items-center justify-center"
+			>
+				<div class="h-[80%] w-[80%] overflow-hidden rounded-2xl border border-gray-600 shadow-2xl">
 					<LocalStorageSync />
 				</div>
 			</div>
-			<div id="left-card" class="h-full w-full relative col-span-1 flex items-center justify-center">
-				<div class="h-[80%] w-[80%] rounded-2xl border border-gray-600 shadow-2xl overflow-hidden flex items-center justify-center">
-					<p class="text-lg font-semibold text-white text-center text-balance px-4">
+			<div
+				id="left-card"
+				class="relative col-span-1 flex h-full w-full items-center justify-center"
+			>
+				<div
+					class="flex h-[80%] w-[80%] items-center justify-center overflow-hidden rounded-2xl border border-gray-600 shadow-2xl"
+				>
+					<p class="px-4 text-center text-lg font-semibold text-balance text-white">
 						Every store change is saved to localStorage.
-					</p>	
+					</p>
 				</div>
-			</div>	
+			</div>
 		</div>
-
-    </section>
-
+	</section>
 </main>
 
 <style>
