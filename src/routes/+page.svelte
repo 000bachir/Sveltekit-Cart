@@ -3,6 +3,9 @@
 	import Stores from '$lib/components/InitSection/Stores.svelte';
 	import Types from '$lib/components/InitSection/Types.svelte';
 	import DerivedStore from '$lib/components/LogicSection/DerivedStore.svelte';
+
+
+
 </script>
 
 <svelte:head>

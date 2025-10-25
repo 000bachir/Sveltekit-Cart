@@ -1,7 +1,8 @@
 <script>
-	let { showModal = $bindable(), children, header } = $props();
+	let { showModal = $bindable(), children, header , title } = $props();
 
 	let dialog = $state('');
+
 
 	$effect(() => {
 		if (showModal) {
@@ -22,7 +23,7 @@
 		<div class="flex flex-col">
 			<div class=" flex w-full items-center justify-between">
 				{@render header?.()}
-				<h2 class="font-semibold text-white">Dummy json types</h2>
+				<h2 class="font-semibold text-white">{title}</h2>
 				<button
 					autofocus
 					title="close"
@@ -37,7 +38,7 @@
 					>
 				</button>
 			</div>
-			<div class="">
+			<div class="w-auto">
 				{@render children?.()}
 			</div>
 			<!-- svelte-ignore a11y_autofocus -->

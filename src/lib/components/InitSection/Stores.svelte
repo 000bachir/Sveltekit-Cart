@@ -4,9 +4,9 @@
 
 <script>
 	import StoreSveltekit from '$lib/assets/Icons/StoreSveltekit.svelte';
-	import CheckingTheBrowser from '../ui/LogicExplanation/CheckingTheBrowser.svelte';
-	import CreateTheStore from '../ui/LogicExplanation/CreateTheStore.svelte';
-	import LocalStorageSync from './LocalStorageSync.svelte';
+	import CheckingTheBrowser from '../ui/first_section_code_block/CheckingTheBrowser.svelte';
+	import CreateTheStore from '../ui/first_section_code_block/CreateTheStore.svelte';
+	import LocalStorageSync from '../ui/first_section_code_block/LocalStorageSync.svelte';
 	import { onMount, onDestroy } from 'svelte';
 	import gsap from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
