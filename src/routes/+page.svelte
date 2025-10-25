@@ -16,7 +16,7 @@
 	/>
 </svelte:head>
 
-<main class="relative h-auto w-full overflow-hidden">
+<main class="relative h-auto w-full overflow-hidden text-white">
 	<section
 		id="title_of_the_blog"
 		class="relative flex h-28 w-full items-center justify-center overflow-hidden bg-amber-400"
