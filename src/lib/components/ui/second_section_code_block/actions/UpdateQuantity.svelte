@@ -1,7 +1,7 @@
-<pre class="h-full w-full flex items-center justify-center text-sm bg-gradient-to-r from-gray-900 to-gray-800 font-semibold">
+<pre class="text-sm  font-semibold  whitespace-pre">
     <code class="text-gray-200 leading-relaxed">
         <span class="text-green-400">UpdateQuantity</span> : (<span class="text-purple-400">id</span> : <span class="text-blue-400">string</span> , <span class="text-purple-400">quantity</span> : <span class="text-blue-400">number</span>) <span class="text-blue-400">=></span>&#123;
-            <span class="text-blue-400">if</span>(<span class="text-purple-400">quantity</span> <= NOTE NEED TO ADD HTML ENTITY <span class="text-orange-400">0</span>)&#123;
+            <span class="text-blue-400">if</span>(<span class="text-purple-400">quantity</span> &le;=  <span class="text-orange-400">0</span>)&#123;
                 <span class="text-yellow-300">CartActions</span>.<span class="text-green-400">removeItem</span>(<span class="text-purple-400">id</span>)
                 <span class="text-blue-400">return</span>
             &#125;

@@ -1,4 +1,4 @@
-<pre class="h-full w-full flex items-center justify-center text-sm bg-gradient-to-r from-gray-900 to-gray-800 font-semibold">
+<pre class=" text-sm  font-semibold  whitespace-pre">
     <code class="text-gray-200 leading-relaxed">
         <span class="text-green-400">DecrementQuantity</span> : (<span class="text-purple-400">id</span> : <span class="text-blue-400">string</span>) <span class="text-blue-400">=></span> &#123;
             <span class="text-blue-400">const</span> <span class="text-purple-400">currentCart</span> = <span class="text-green-400">get</span>(<span class="text-yellow-300">cartStore</span>)

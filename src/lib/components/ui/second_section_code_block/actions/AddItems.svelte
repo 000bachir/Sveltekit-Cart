@@ -1,4 +1,4 @@
-<pre class="h-full w-full flex items-center justify-center text-sm bg-gradient-to-r from-gray-900 to-gray-800 font-semibold">
+<pre class="text-sm font-semibold  overflow-x-auto whitespace-pre">
     <code class="text-gray-200 leading-relaxed">
         <span class="text-green-400">addItem</span> : (<span class="text-purple-400">item</span> : <span class="text-yellow-300">Omit</span>&#60;<span class="text-blue-400">CartProduct</span> , <span class="text-green-300">'quantity'</span>&#62; , <span class="text-purple-400">quantity</span> = <span class="text-orange-400">1</span>)<span class="text-blue-400">=></span>&#123;
             <span class="text-yellow-300">cartStore</span>.<span class="text-green-400">update</span>&#40;(<span class="text-purple-400">cart</span>)<span class="text-blue-400">=></span>&#123;

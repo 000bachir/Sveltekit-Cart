@@ -11,14 +11,14 @@
 	});
 </script>
 
-<article class="relative flex items-center justify-center">
+<article class=" flex items-center justify-center">
 	<dialog
 		bind:this={dialog}
 		onclose={() => (showModal = false)}
 		onclick={(e) => {
 			if (e.target === dialog) dialog.close();
 		}}
-		class="h-auto w-auto overflow-scroll overflow-x-hidden rounded-2xl "
+		class="h-auto w-auto overflow-scroll overflow-x-auto rounded-2xl "
 	>
 		<div class="flex flex-col">
 			<div class=" flex w-full items-center justify-between">

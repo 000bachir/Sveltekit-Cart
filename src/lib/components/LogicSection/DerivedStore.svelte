@@ -2,6 +2,7 @@
 	import Modal from '../ui/Modal.svelte';
 	import AddItems from '../ui/second_section_code_block/actions/AddItems.svelte';
 	import DerivedStoreCode from '../ui/second_section_code_block/Derived_store_code.svelte';
+	import CartActions from './CartActions.svelte';
 
     let showModal = $state(false)
     let title = "derive store for total code"
@@ -74,22 +75,7 @@
         </article>
         <!--the idea here is to have modal button right and as far as am conserned for each of the action am gonna make it"s code snippet inside of it -->
         <article class="h-96 w-full grid grid-cols-3 grid-rows-2">
-            <!--each of these div will contain a specific action and if the ui is good a tiny desc -->
-
-            <!--!add items-->
-            <div class="bg-red-500">
-            </div> 
-            <!--! remove items-->
-            <div class="bg-green-500"></div>
-            <!--!update quantity items-->
-            <div class="bg-yellow-500"></div>
-            <!--!increment quantity items-->
-            <div class="bg-white"></div>
-            <!--!decrement quantity items-->
-            <div class="bg-purple-500"></div>
-
-            <!-- ? clear cart and get cart am gonna combine them since they are not that hard-->   
-            <div class="bg-fuchsia-700"></div>
+          <CartActions />
         </article>
 
 
