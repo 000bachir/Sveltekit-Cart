@@ -34,9 +34,7 @@
 	<Hero />
     <Types />
 	<Stores />
-
-	<!-- ! Now the logic part -->
-
+	<!-- !the logic part -->
 	<DerivedStore />
 
 </main>

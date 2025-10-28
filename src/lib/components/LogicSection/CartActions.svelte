@@ -20,7 +20,7 @@
 			activeModal = 'add';
 		}}
 		type="button"
-		class="me-2 mb-2 cursor-pointer rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
+		class="me-2 mb-2 cursor-pointer rounded-lg bg-gray-300 hover:bg-gray-400 px-5 py-2.5 text-center text-sm  text-black font-semibold hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
 	>
 		Add items
 	</button>
@@ -42,7 +42,7 @@
 			console.log('remove items btn clicked');
 		}}
 		type="button"
-		class="me-2 mb-2 cursor-pointer rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
+		class="me-2 mb-2 cursor-pointer rounded-lg bg-gray-300 hover:bg-gray-400 px-5 py-2.5 text-center text-sm font-semibold text-black hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
 	>
 		Remove Items
 	</button>
@@ -62,7 +62,7 @@
 			console.log('remove items btn clicked');
 		}}
 		type="button"
-		class="me-2 mb-2 cursor-pointer rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
+		class="me-2 mb-2 cursor-pointer rounded-lg bg-gray-300 hover:bg-gray-400 px-5 py-2.5 text-center text-sm font-semibold text-black hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
 	>
 		Update Quantity
 	</button>
@@ -81,7 +81,7 @@
 			console.log('remove items btn clicked');
 		}}
 		type="button"
-		class="me-2 mb-2 cursor-pointer rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
+		class="me-2 mb-2 cursor-pointer rounded-lg bg-gray-300 hover:bg-gray-400 px-5 py-2.5 text-center text-sm font-semibold text-black hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
 	>
 		Increment Quantity
 	</button>
@@ -92,6 +92,7 @@
 	{/if}
 </div>
 <!--!decrement quantity items-->
+
 <div class="flex h-full w-full items-center justify-center overflow-hidden">
     <button
 		onclick={() => {
@@ -100,7 +101,7 @@
 			console.log('remove items btn clicked');
 		}}
 		type="button"
-		class="me-2 mb-2 cursor-pointer rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
+		class="me-2 mb-2 cursor-pointer rounded-lg bg-gray-300 hover:bg-gray-400 px-5 py-2.5 text-center text-sm font-semibold text-black hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
 	>
 		Decrement Quantity
 	</button>
@@ -120,7 +121,7 @@
 			activeModal = "ClearAndGetCart";
 		}}
 		type="button"
-		class="me-2 mb-2 cursor-pointer rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
+		class="me-2 mb-2 cursor-pointer rounded-lg bg-gray-300 hover:bg-gray-400 px-5 py-2.5 text-center text-sm font-semibold text-black hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
 	>
 		Clear / Get Cart
 	</button>
