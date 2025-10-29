@@ -1,6 +1,4 @@
-
 <!--TODO : need to add responsiveness-->
-
 
 <script>
 	import StoreSveltekit from '$lib/assets/Icons/StoreSveltekit.svelte';
@@ -12,10 +10,7 @@
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { browser } from '$app/environment';
 
-
 	let scrollTriggerInstance;
-
-
 
 	onMount(() => {
 		if (browser) {
@@ -36,7 +31,7 @@
 				trigger: triggerAnimation,
 				top: 'top top',
 				end: 'bottom bottom',
-				scrub: true,
+				scrub: true
 			}
 		});
 		TimeLine.fromTo(
@@ -51,22 +46,19 @@
 			}
 		);
 
-		scrollTriggerInstance = TimeLine.scrollTrigger
-
+		scrollTriggerInstance = TimeLine.scrollTrigger;
 	});
-	onDestroy(()=>{
-		if(scrollTriggerInstance){
-			scrollTriggerInstance.kill()
+	onDestroy(() => {
+		if (scrollTriggerInstance) {
+			scrollTriggerInstance.kill();
 		}
-	})
-
-
+	});
 </script>
 
 <main class="relative h-auto w-auto overflow-hidden">
 	<div class="flex h-32 w-full items-center justify-center bg-amber-400">
 		<h1
-			class=" font-semibold underline decoration-4 sm:text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
+			class="px-4 text-center text-lg font-semibold text-balance text-black underline decoration-2 sm:text-xl md:text-2xl lg:text-3xl"
 		>
 			Now the logic
 		</h1>
@@ -81,7 +73,7 @@
 		</h1>
 	</div>
 
-	<section class="relative grid h-96 w-full grid-cols-2">
+	<section id="sveltekit_store_part" class="relative grid h-96 w-full grid-cols-2">
 		<article
 			class="col-span-1 flex h-full w-full items-center justify-center overflow-hidden bg-fuchsia-300"
 		>
@@ -89,21 +81,23 @@
 		</article>
 		<article class="col-span-1 h-full w-full overflow-hidden">
 			<div class="mx-auto flex h-full w-[95%] items-center justify-center">
-				<p class="flex flex-col items-start justify-start gap-5 font-semibold text-white">
+				<p
+					class="flex flex-col items-start justify-start gap-4 px-4 text-sm leading-relaxed font-semibold text-white sm:gap-5 sm:text-base md:text-lg"
+				>
 					For this we are gonna use :
-					<span class="">
+					<span>
 						<strong class="underline decoration-2">writable</strong>: a store you can read and
 						update (like a variable that reacts)
 					</span>
-					<span class="">
+					<span>
 						<strong class="underline decoration-2">readable</strong>: a store you can only read, not
 						update directly
 					</span>
-					<span class="">
+					<span>
 						<strong class="underline decoration-2">derived</strong>: a store whose value depends on
 						other stores
 					</span>
-					<span class="">
+					<span>
 						<strong class="underline decoration-2">get</strong>: instantly read a store’s current
 						value (outside components)
 					</span>
@@ -122,7 +116,10 @@
 			</h1>
 		</div>
 
-		<article class="relative grid h-40 w-full grid-cols-2 overflow-hidden">
+		<article
+			id="cheking_the_browser_article_tag"
+			class="relative grid h-40 w-full grid-cols-2 overflow-hidden"
+		>
 			<div class="col-span-1 h-full w-full overflow-hidden">
 				<div class="mx-auto h-full w-[95%]">
 					<CheckingTheBrowser />
@@ -154,9 +151,11 @@
 		<article class="relative grid h-40 w-full grid-cols-2 overflow-hidden">
 			<div class="col-span-1 h-full w-full overflow-hidden">
 				<div class="mx-auto flex h-full w-[95%] items-center justify-center">
-					<p class="text-center text-lg font-semibold text-balance text-white">
-						writable makes a reactive value you can read & update think of it as a magic reactive
-						box
+					<p
+						class="px-4 text-center text-sm leading-relaxed font-semibold text-balance text-white sm:text-base md:text-lg lg:text-xl"
+					>
+						<span class="italic">writable</span> makes a reactive value you can read & update — think
+						of it as a magic reactive box
 					</p>
 				</div>
 			</div>
@@ -169,7 +168,7 @@
 	</section>
 
 	<!--Local Storage Sync to the ui-->
-	<section class="relative h-auto w-full overflow-hidden">
+	<section id="sveltekit_memeory_borwser_updated" class="relative h-auto w-full overflow-hidden">
 		<div class="mx-auto flex h-32 w-[95%] items-center justify-center">
 			<h1
 				class="font-semibold text-white sm:text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
@@ -204,4 +203,43 @@
 </main>
 
 <style>
+	@media screen and (max-width: 1024px) {
+		#cheking_the_browser_article_tag {
+			padding: 1rem 0rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			height: auto;
+			gap: 3rem;
+			/* background: red; */
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		#sveltekit_store_part {
+			height: auto;
+			padding: 1rem 0rem;
+		}
+
+		#cheking_the_browser_article_tag {
+			padding: 1rem 0rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+		}
+	}
+
+	@media screen and (max-width: 425px) {
+		#sveltekit_store_part {
+			height: auto;
+			padding: 1rem 0rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			gap: 3rem;
+		}
+	}
 </style>

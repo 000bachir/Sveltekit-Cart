@@ -13,10 +13,6 @@
 			<h1 class=" link 2xl:text-2xl xl:text-xl lg:text-lg md:text-lg sm:text-sm font-semibold text-white">
 				<a href="/about"> About </a>
 			</h1>
-
-			<h1 class="link 2xl:text-2xl xl:text-xl lg:text-lg md:text-lg sm:text-sm font-semibold text-white">
-				<a href="/about"> Contact </a>
-			</h1>
 		</div>
 	</div>
 </nav>

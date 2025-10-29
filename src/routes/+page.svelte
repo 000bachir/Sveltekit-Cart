@@ -22,7 +22,7 @@
 		class="relative flex h-28 w-full items-center justify-center overflow-hidden bg-amber-400"
 	>
 		<h1
-			class="font-semibold underline decoration-4 sm:text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
+			class="font-semibold text-black underline decoration-4 sm:text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
 		>
 			The Easiest Way to Make a Cart in SvelteKit
 		</h1>

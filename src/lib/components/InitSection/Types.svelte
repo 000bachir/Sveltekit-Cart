@@ -12,7 +12,7 @@
 
 	<div class="relative flex h-32 w-full items-center justify-center">
 		<h1
-			class=" text-center leading-relaxed font-semibold text-balance text-white underline decoration-4 sm:text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
+			class=" text-center leading-relaxed font-semibold text-balance text-white underline decoration-2 sm:text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
 		>
 			Disclaimer : Im gonna use types that refer to dummy json api just to make it a bit clear
 		</h1>
@@ -21,8 +21,11 @@
 	<div class="relative grid h-96 w-full grid-cols-2 overflow-hidden">
 		<article
 			class="relative col-span-1 flex flex-col h-full w-full items-center justify-center gap-10 overflow-hidden"
-		>
-			<h1 class="font-semibold text-2xl text-white text-center text-balance">Create a CartProduct.ts file in the lib directory then add the types</h1>
+		>	
+			<!-- <h1 class="font-semibold text-2xl text-white text-center text-balance"> -->
+			<h1 class="font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl text-white text-center text-balance px-4">
+				Create a CartProduct.ts file in the lib directory then add the types
+			</h1>
 			<button
 				onclick={() => (showModal = true)}
 				type="button"

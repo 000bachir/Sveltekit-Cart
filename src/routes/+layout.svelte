@@ -15,5 +15,4 @@
 	<Navbar />
 </header>
 {@render children?.()}
-
 <Footer />
