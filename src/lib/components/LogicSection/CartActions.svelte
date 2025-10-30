@@ -20,9 +20,9 @@
 			activeModal = 'add';
 		}}
 		type="button"
-		class="me-2 mb-2 cursor-pointer rounded-lg bg-gray-300 hover:bg-gray-400 px-5 py-2.5 text-center text-sm  text-black font-semibold hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
+		class="me-2 mb-2 cursor-pointer rounded-lg bg-gray-300 px-4 py-2 text-center text-xs font-semibold text-black transition-all duration-300 hover:bg-gray-400 hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none sm:px-5 sm:py-2.5 sm:text-sm md:px-6 md:py-3 md:text-base dark:focus:ring-blue-800"
 	>
-		Add items
+		Adding items
 	</button>
 	{#if showModal && activeModal === 'add'}
 		<Modal bind:showModal>
@@ -42,7 +42,7 @@
 			console.log('remove items btn clicked');
 		}}
 		type="button"
-		class="me-2 mb-2 cursor-pointer rounded-lg bg-gray-300 hover:bg-gray-400 px-5 py-2.5 text-center text-sm font-semibold text-black hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
+		class="me-2 mb-2 cursor-pointer rounded-lg bg-gray-300 px-4 py-2 text-center text-xs font-semibold text-black transition-all duration-300 hover:bg-gray-400 hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none sm:px-5 sm:py-2.5 sm:text-sm md:px-6 md:py-3 md:text-base dark:focus:ring-blue-800"
 	>
 		Remove Items
 	</button>
@@ -52,9 +52,8 @@
 		</Modal>
 	{/if}
 </div>
-
 <!--!update quantity items-->
-<div class="flex h-full w-full items-center justify-center overflow-hidden ">
+<div class="flex h-full w-full items-center justify-center overflow-hidden">
 	<button
 		onclick={() => {
 			showModal = true;
@@ -62,7 +61,7 @@
 			console.log('remove items btn clicked');
 		}}
 		type="button"
-		class="me-2 mb-2 cursor-pointer rounded-lg bg-gray-300 hover:bg-gray-400 px-5 py-2.5 text-center text-sm font-semibold text-black hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
+		class="me-2 mb-2 cursor-pointer rounded-lg bg-gray-300 px-4 py-2 text-center text-xs font-semibold text-black transition-all duration-300 hover:bg-gray-400 hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none sm:px-5 sm:py-2.5 sm:text-sm md:px-6 md:py-3 md:text-base dark:focus:ring-blue-800"
 	>
 		Update Quantity
 	</button>
@@ -81,9 +80,9 @@
 			console.log('remove items btn clicked');
 		}}
 		type="button"
-		class="me-2 mb-2 cursor-pointer rounded-lg bg-gray-300 hover:bg-gray-400 px-5 py-2.5 text-center text-sm font-semibold text-black hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
+		class="me-2 mb-2 cursor-pointer rounded-lg bg-gray-300 px-4 py-2 text-center text-xs font-semibold text-black transition-all duration-300 hover:bg-gray-400 hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none sm:px-5 sm:py-2.5 sm:text-sm md:px-6 md:py-3 md:text-base dark:focus:ring-blue-800"
 	>
-		Increment Quantity
+		Increment amount
 	</button>
 	{#if showModal && activeModal === 'increment'}
 		<Modal bind:showModal>
@@ -92,18 +91,16 @@
 	{/if}
 </div>
 <!--!decrement quantity items-->
-
 <div class="flex h-full w-full items-center justify-center overflow-hidden">
-    <button
+	<button
 		onclick={() => {
 			showModal = true;
 			activeModal = 'decrement';
-			console.log('remove items btn clicked');
 		}}
 		type="button"
-		class="me-2 mb-2 cursor-pointer rounded-lg bg-gray-300 hover:bg-gray-400 px-5 py-2.5 text-center text-sm font-semibold text-black hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
+		class="me-2 mb-2 cursor-pointer rounded-lg bg-gray-300 px-4 py-2 text-center text-xs font-semibold text-black transition-all duration-300 hover:bg-gray-400 hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none sm:px-5 sm:py-2.5 sm:text-sm md:px-6 md:py-3 md:text-base dark:focus:ring-blue-800"
 	>
-		Decrement Quantity
+		Decrement amount
 	</button>
 	{#if showModal && activeModal === 'decrement'}
 		<Modal bind:showModal>
@@ -111,17 +108,15 @@
 		</Modal>
 	{/if}
 </div>
-
 <!-- ? clear cart and get cart am gonna combine them since they are not that hard-->
-<div class=" flex flex-col h-full w-full items-center justify-center overflow-hidden">
-
-    <button
+<div class=" flex h-full w-full flex-col items-center justify-center overflow-hidden">
+	<button
 		onclick={() => {
 			showModal = true;
-			activeModal = "ClearAndGetCart";
+			activeModal = 'ClearAndGetCart';
 		}}
 		type="button"
-		class="me-2 mb-2 cursor-pointer rounded-lg bg-gray-300 hover:bg-gray-400 px-5 py-2.5 text-center text-sm font-semibold text-black hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
+		class="me-2 mb-2 cursor-pointer rounded-lg bg-gray-300 px-4 py-2 text-center text-xs font-semibold text-black transition-all duration-300 hover:bg-gray-400 hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none sm:px-5 sm:py-2.5 sm:text-sm md:px-6 md:py-3 md:text-base dark:focus:ring-blue-800"
 	>
 		Clear / Get Cart
 	</button>
@@ -130,7 +125,6 @@
 			<ClearAndGetCart />
 		</Modal>
 	{/if}
-
 </div>
 
 <style>

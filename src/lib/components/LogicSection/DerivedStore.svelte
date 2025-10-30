@@ -21,56 +21,62 @@
 	</section>
 
 	<!--Derived Store for Totals-->
-	<section class="relative grid h-96 w-full grid-cols-2 overflow-hidden">
-		<!-- explanation -->
+	<section
+		class="relative grid w-full grid-cols-1 overflow-hidden border-t border-b border-gray-700 py-10 md:grid-cols-2"
+	>
+		<!-- Explanation -->
 		<article
-			class="relative col-span-1 flex h-full w-full flex-col items-center justify-center gap-10 overflow-hidden border-r-[1px] border-gray-50"
+			class="flex flex-col items-center justify-center gap-6 border-b border-gray-700 px-4 py-6 text-center md:border-r md:border-b-0"
 		>
-			<h1 class="text-center text-2xl font-semibold text-balance text-white">
+			<h1 class="text-xl font-semibold text-balance text-white sm:text-2xl md:text-3xl">
 				A store that calculates things automatically 🤑
 			</h1>
+
 			<button
 				onclick={() => (showModal = true)}
 				type="button"
-				class="me-2 mb-2 cursor-pointer rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gradient-to-bl focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800"
+				class="rounded-lg bg-gradient-to-br from-purple-600 to-blue-500 px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:from-purple-500 hover:to-blue-400 focus:ring-4 focus:ring-blue-300 focus:outline-none sm:text-base dark:focus:ring-blue-800"
 			>
 				Display Code
 			</button>
+
 			<Modal bind:showModal>
 				{#snippet header()}
-					<h1 class="text-lg font-semibold text-white">
-						{title}
-					</h1>
+					<h1 class="text-lg font-semibold text-white">{title}</h1>
 				{/snippet}
 				<DerivedStoreCode />
 			</Modal>
 		</article>
-		<!-- code snippet -->
+
+		<!-- Code snippet / Explanation list -->
 		<article
-			class="relative col-span-1 h-full w-full overflow-hidden border-l-[1px] border-gray-50"
+			class="flex flex-col items-center justify-center px-4 py-6 text-center md:px-8 md:text-left"
 		>
-			<div class="mx-auto flex h-full w-[95%] flex-col items-start justify-evenly">
-				<h1 class="text-center text-lg font-semibold text-balance">
-					important takeaway : think of the reduce methode as a way to shrink an array of number
-					into it's cumulative
+			<div class="w-full max-w-[600px] space-y-6">
+				<h1 class="text-base font-semibold text-balance text-white sm:text-lg md:text-xl">
+					Important takeaway: think of the
+					<span class="font-bold text-yellow-400">reduce</span> method as a way to shrink an array of
+					numbers into its cumulative value.
 				</h1>
-				<ul class="flex flex-col gap-2">
-					<li class="font-semibold">
-						<span class="text-yellow-400"><strong>ItemCount</strong></span> : count how many items in
-						the Cart
+
+				<ul class="flex flex-col gap-3">
+					<li class="text-sm font-semibold text-white sm:text-base md:text-lg">
+						<span class="font-bold text-yellow-400">ItemCount</span> — counts how many items are in the
+						cart.
 					</li>
-					<li class="font-semibold">
-						<span class="text-yellow-400"><strong>subTotal</strong></span> : the total price of the selected
-						items
+					<li class="text-sm font-semibold text-white sm:text-base md:text-lg">
+						<span class="font-bold text-yellow-400">subTotal</span> — the total price of the selected
+						items.
 					</li>
-					<li class="font-semibold">
-						<span class="text-yellow-400"><strong>formattedSubtotal</strong></span> : format the total
-						to get something like 100$
+					<li class="text-sm font-semibold text-white sm:text-base md:text-lg">
+						<span class="font-bold text-yellow-400">formattedSubtotal</span> — formats the total,
+						e.g. <span class="text-green-300">100$</span>.
 					</li>
 				</ul>
 			</div>
 		</article>
 	</section>
+
 	<!-- ⚙️ 5. The Actions Object-->
 	<section class="h-auto w-full overflow-hidden">
 		<article
@@ -84,9 +90,15 @@
 			</h1>
 		</article>
 		<!--the idea here is to have modal button right and as far as am conserned for each of the action am gonna make it"s code snippet inside of it -->
-		<article id="logic-cart-section" class="grid h-96 w-full grid-cols-3 grid-rows-2">
+		<!-- <article id="logic-cart-section" class="grid h-96 w-full grid-cols-3 grid-rows-2 py-4 ">
 			<CartActions />
-		</article>
+		</article> -->
+		
+		
+		<article id="logic-cart-section" class="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4 sm:p-6 md:p-8">
+			<CartActions />
+		</article> 
+		
 	</section>
 </main>
 

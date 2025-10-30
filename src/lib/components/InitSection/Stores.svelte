@@ -106,61 +106,74 @@
 		</article>
 	</section>
 
-	<!--cheking the browser for previous data -->
-	<section class="relative h-auto w-full overflow-hidden">
-		<div class="mx-auto flex h-32 w-[95%] items-center justify-center">
+	<!--?cheking the browser for previous data -->
+
+	<section class="relative w-full overflow-hidden py-8">
+		<!-- Title -->
+		<div class="mx-auto flex w-[95%] items-center justify-center">
 			<h1
-				class="font-semibold text-white sm:text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
+				class="text-center text-lg font-semibold text-white sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl"
 			>
-				Step one : Checking the browser for existing data
+				Step One : Checking the browser for existing data
 			</h1>
 		</div>
 
+		<!-- Content -->
 		<article
-			id="cheking_the_browser_article_tag"
-			class="relative grid h-40 w-full grid-cols-2 overflow-hidden"
+			id="checking_the_browser_article_tag"
+			class="relative mt-8 grid w-full grid-cols-1 gap-6 overflow-hidden md:grid-cols-2"
 		>
-			<div class="col-span-1 h-full w-full overflow-hidden">
-				<div class="mx-auto h-full w-[95%]">
+			<!-- Left (Component) -->
+			<div class="flex items-center justify-center px-4">
+				<div class="w-full max-w-[95%]">
 					<CheckingTheBrowser />
 				</div>
 			</div>
-			<div class="col-span-1 h-full w-full overflow-hidden">
-				<div class="mx-auto flex h-full w-[95%] flex-col items-center justify-center">
-					<p class="text-center text-lg font-semibold text-white">
-						this checks if we’re in the browser and loads existing data.
-					</p>
-					<p class="text-center text-lg font-semibold text-white">
-						do not forget to import the &#123; browser &#125; from $app/environment;
-					</p>
-				</div>
+
+			<!-- Right (Text) -->
+			<div class="flex flex-col items-center justify-center space-y-4 px-4">
+				<p
+					class="text-center text-sm leading-relaxed font-semibold text-white sm:text-base md:text-lg lg:text-xl"
+				>
+					This checks if we’re in the browser and loads existing data.
+				</p>
+				<p
+					class="text-center text-sm leading-relaxed font-semibold text-white sm:text-base md:text-lg lg:text-xl"
+				>
+					Don’t forget to import <code class="text-[#00FFFF]">{browser}</code> from
+					<code class="text-[#00FFFF]">$app/environment</code>;
+				</p>
 			</div>
 		</article>
 	</section>
 
-	<!--create the store : -->
-	<section class="relative h-auto w-full overflow-hidden">
-		<div class="mx-auto flex h-32 w-[95%] items-center justify-center">
+	<!--!create the store : -->
+
+	<section class="relative w-full overflow-hidden py-8">
+		<!-- Title -->
+		<div class="mx-auto flex w-[95%] items-center justify-center">
 			<h1
-				class="font-semibold text-white sm:text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
+				class="text-center text-lg font-semibold text-white sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl"
 			>
 				Step Two : Create the store
 			</h1>
 		</div>
 
-		<article class="relative grid h-40 w-full grid-cols-2 overflow-hidden">
-			<div class="col-span-1 h-full w-full overflow-hidden">
-				<div class="mx-auto flex h-full w-[95%] items-center justify-center">
-					<p
-						class="px-4 text-center text-sm leading-relaxed font-semibold text-balance text-white sm:text-base md:text-lg lg:text-xl"
-					>
-						<span class="italic">writable</span> makes a reactive value you can read & update — think
-						of it as a magic reactive box
-					</p>
-				</div>
+		<!-- Content -->
+		<article class="relative mt-8 grid w-full grid-cols-1 gap-6 overflow-hidden md:grid-cols-2">
+			<!-- Text section -->
+			<div class="flex items-center justify-center px-4">
+				<p
+					class="text-center text-sm leading-relaxed font-semibold text-balance text-white sm:text-base md:text-lg lg:text-xl"
+				>
+					<span class="italic">writable</span> makes a reactive value you can read & update — think of
+					it as a magic reactive box
+				</p>
 			</div>
-			<div class="col-span-1 h-full w-full overflow-hidden">
-				<div class="mx-auto h-full w-[95%]">
+
+			<!-- Component section -->
+			<div class="flex items-center justify-center px-4">
+				<div class="w-full max-w-[95%]">
 					<CreateTheStore />
 				</div>
 			</div>
@@ -168,33 +181,40 @@
 	</section>
 
 	<!--Local Storage Sync to the ui-->
-	<section id="sveltekit_memeory_borwser_updated" class="relative h-auto w-full overflow-hidden">
-		<div class="mx-auto flex h-32 w-[95%] items-center justify-center">
+	
+	<section id="sveltekit_memory_browser_updated" class="relative w-full overflow-hidden py-8">
+		<!-- Title -->
+		<div class="mx-auto flex w-[95%] items-center justify-center">
 			<h1
-				class="font-semibold text-white sm:text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl"
+				class="text-center text-lg font-semibold text-white sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl"
 			>
-				Step Three : keep the browser memory updated
+				Step Three : Keep the browser memory updated
 			</h1>
 		</div>
 
-		<div id="animation-trigger" class="relative grid h-96 w-full grid-cols-2 overflow-hidden">
-			<div
-				id="right-card"
-				class="bg relative col-span-1 flex h-full w-full items-center justify-center"
-			>
-				<div class="h-[80%] w-[80%] overflow-hidden rounded-2xl border border-gray-600 shadow-2xl">
+		<!-- Content -->
+		<div
+			id="animation-trigger"
+			class="relative mt-8 grid w-full grid-cols-1 gap-6 overflow-hidden md:grid-cols-2"
+		>
+			<!-- Left (LocalStorageSync Component) -->
+			<div id="right-card" class="flex items-center justify-center px-4">
+				<div
+					class="aspect-video w-full max-w-[90%] overflow-hidden rounded-2xl border border-gray-600 shadow-2xl md:aspect-[4/3]"
+				>
 					<LocalStorageSync />
 				</div>
 			</div>
-			<div
-				id="left-card"
-				class="relative col-span-1 flex h-full w-full items-center justify-center"
-			>
+
+			<!-- Right (Text Card) -->
+			<div id="left-card" class="flex items-center justify-center px-4">
 				<div
-					class="flex h-[80%] w-[80%] items-center justify-center overflow-hidden rounded-2xl border border-gray-600 shadow-2xl"
+					class="flex aspect-video w-full max-w-[90%] items-center justify-center overflow-hidden rounded-2xl border border-gray-600 shadow-2xl md:aspect-[4/3]"
 				>
-					<p class="px-4 text-center text-lg font-semibold text-balance text-white">
-						Every store change is saved to localStorage.
+					<p
+						class="px-4 text-center text-sm leading-relaxed font-semibold text-balance text-white sm:text-base md:text-lg lg:text-xl"
+					>
+						Every store change is saved to <span class="text-[#00FFFF]">localStorage</span>.
 					</p>
 				</div>
 			</div>
@@ -204,7 +224,7 @@
 
 <style>
 	@media screen and (max-width: 1024px) {
-		#cheking_the_browser_article_tag {
+		/* #cheking_the_browser_article_tag {
 			padding: 1rem 0rem;
 			display: flex;
 			align-items: center;
@@ -212,8 +232,7 @@
 			flex-direction: column;
 			height: auto;
 			gap: 3rem;
-			/* background: red; */
-		}
+		} */
 	}
 
 	@media screen and (max-width: 768px) {
@@ -222,13 +241,13 @@
 			padding: 1rem 0rem;
 		}
 
-		#cheking_the_browser_article_tag {
+		/* #cheking_the_browser_article_tag {
 			padding: 1rem 0rem;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			flex-direction: column;
-		}
+		} */
 	}
 
 	@media screen and (max-width: 425px) {
