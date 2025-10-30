@@ -2,28 +2,38 @@
 </script>
 
 <svelte:head>
-	<title>About | Universal Cart Blog</title>
+	<title>About | Cart Blog</title>
+
 	<meta
 		name="description"
-		content="Learn about the developer on why he made this small blog."
+		content="Learn about Peak, the developer behind Cart Blog, and the inspiration for building a universal cart using SvelteKit."
 	/>
 	<meta name="author" content="Peak" />
-	<meta name="keywords" content="SvelteKit, shopping cart, web development, JavaScript, frontend , Developer , Cause of developement" />
+	<meta
+		name="keywords"
+		content="SvelteKit, shopping cart, web development, JavaScript, frontend, developer story, about"
+	/>
 
-	<!-- Open Graph (for social media) -->
-	<meta property="og:title" content="About | Universal Cart Blog" />
-	<meta property="og:description" content="Learn how to build a universal cart using SvelteKit." />
+	<!-- Open Graph (Social Media Preview) -->
+	<meta property="og:title" content="About | Cart Blog" />
+	<meta
+		property="og:description"
+		content="Discover why this blog was created and the motivation behind building a universal cart with SvelteKit."
+	/>
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://sveltekit-ecommerce-cart.netlify.app/" />
+	<meta property="og:url" content="https://sveltekit-ecommerce-cart.netlify.app/about" />
 	<meta property="og:image" content="https://sveltekit-ecommerce-cart.netlify.app/banner.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
 
-	<!-- Twitter cards -->
+	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="About | Universal Cart Blog" />
-	<meta name="twitter:description" content="Learn how to build a universal cart using SvelteKit." />
+	<meta name="twitter:title" content="About | Cart Blog" />
+	<meta
+		name="twitter:description"
+		content="Discover why this blog was created and the motivation behind building a universal cart with SvelteKit."
+	/>
 	<meta name="twitter:image" content="https://sveltekit-ecommerce-cart.netlify.app/banner.jpg" />
-
-	<title>about</title>
 </svelte:head>
 
 <main class="relative h-auto w-full overflow-hidden">

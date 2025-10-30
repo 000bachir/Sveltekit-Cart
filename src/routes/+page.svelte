@@ -6,20 +6,23 @@
 </script>
 
 <svelte:head>
-	<title>Cart Blog</title>
+	<title>Cart Blog | Build a Universal Cart with SvelteKit</title>
 
 	<meta
 		name="description"
-		content="Learn how to build a universal cart using SvelteKit with simple explanations and clean examples."
+		content="Learn how to build a universal cart using SvelteKit with simple explanations, clean examples, and reactive stores."
 	/>
 	<meta name="author" content="Peak" />
-	<meta name="keywords" content="SvelteKit, shopping cart, web development, JavaScript, frontend" />
+	<meta
+		name="keywords"
+		content="SvelteKit, shopping cart, reactive store, web development, JavaScript, frontend"
+	/>
 
-	<!-- Open Graph (for social media) -->
-	<meta property="og:title" content="Cart Blog" />
+	<!-- Open Graph (Social Media Preview) -->
+	<meta property="og:title" content="Cart Blog | Build a Universal Cart with SvelteKit" />
 	<meta
 		property="og:description"
-		content="Learn how to build a universal cart using SvelteKit with clean examples and simple explanations."
+		content="Learn how to build a universal cart using SvelteKit with simple explanations and clean examples."
 	/>
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://sveltekit-ecommerce-cart.netlify.app/" />
@@ -27,12 +30,12 @@
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 
-	<!-- Twitter cards -->
+	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Cart Blog" />
+	<meta name="twitter:title" content="Cart Blog | Build a Universal Cart with SvelteKit" />
 	<meta
 		name="twitter:description"
-		content="Learn how to build a universal cart using SvelteKit with clean examples and simple explanations."
+		content="Learn how to build a universal cart using SvelteKit with simple explanations and clean examples."
 	/>
 	<meta name="twitter:image" content="https://sveltekit-ecommerce-cart.netlify.app/banner.jpg" />
 </svelte:head>
