@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>Cart Blog | Build a Universal Cart with SvelteKit</title>
+	<title>Cart Blog</title>
 
 	<meta
 		name="description"

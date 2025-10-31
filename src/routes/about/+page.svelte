@@ -2,7 +2,7 @@
 </script>
 
 <svelte:head>
-	<title>About | Cart Blog</title>
+	<title>About</title>
 
 	<meta
 		name="description"
