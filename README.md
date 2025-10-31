@@ -1,38 +1,41 @@
-# sv
+# 🛒 SvelteKit Universal Cart
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A **universal shopping cart** built with **SvelteKit**, **JavaScript**, and **TailwindCSS**.  
+This project demonstrates how to use **Svelte stores** effectively and leverage **localStorage** to persist cart items across sessions — all while keeping the codebase simple, fast, and responsive.
 
-## Creating a project
+---
 
-If you're seeing this, you've probably already done this step. Congrats!
+## 🌐 Live Demo
 
-```sh
-# create a new project in the current directory
-npx sv create
+🔗 **[View Project on Netlify](https://sveltekit-ecommerce-cart.netlify.app/)**
 
-# create a new project in my-app
-npx sv create my-app
-```
+---
 
-## Developing
+## ⚙️ Tech Stack
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- [SvelteKit](https://kit.svelte.dev/) – modern framework for building fast web apps  
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – for cart logic and reactivity  
+- [TailwindCSS](https://tailwindcss.com/) – for responsive and elegant UI styling  
+- [Netlify](https://www.netlify.com/) – for seamless deployment and hosting  
 
-```sh
+---
+
+## 🧠 Features
+
+- Persistent cart using **localStorage**
+- Reactive global state via **Svelte writable stores**
+- Clean and modular component structure
+- Fully **responsive design**
+- Fast build and deployment setup with Netlify
+
+---
+
+## 🚀 Getting Started
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/000bachir/Sveltekit-Cart.git
+cd sveltekit-universal-cart
+npm install
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
